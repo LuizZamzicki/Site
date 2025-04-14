@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .header {
   background-color: #360103;
 
@@ -57,6 +62,7 @@
         margin: 0 5px;
 
         .btn {
+          font-family: Arial, Helvetica, sans-serif;
           background-color: #ea3818;
           padding: 10px 15px;
           border-radius: 10px;
@@ -88,7 +94,126 @@
   transform: scale(0.95);
 }
 
-@media (max-width: 950px) {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../img/cidade_fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.historia-jogo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.historia {
+  width: 60%;
+  max-height: 500px;
+  overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff8ff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  line-height: 1.8;
+}
+
+.personagem {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  flex: 1;
+  display: flex;
+
+  align-items: flex-end;
+}
+
+.personagem img {
+  max-height: 70%;
+  height: 600px;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+
+.chao {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -10px;
+  box-sizing: border-box;
+}
+
+/* Para telas menores que 1450px */
+@media (max-width: 1450px) {
+  .historia-jogo {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .historia {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 60%;
+    box-sizing: border-box;
+  }
+
+  .personagem {
+    position: absolute;
+    bottom: -1%; /* Ajuste esse valor pra subir ou descer */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .personagem img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.main {
+  .inimigos-campo {
+    background-color: #1b1a1f;
+    display: flex;
+
+    .inimigo-historia {
+      margin: 60px;
+      padding: 20px;
+      background-color: rgba(255, 248, 255, 0.8);
+      width: 50%;
+      max-height: 500px;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      border-radius: 10px;
+      font-size: 20px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      line-height: 1.8;
+    }
+
+    .inimigo-img {
+      width: 550px;
+      height: 550px;
+      margin: 60px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
   .header {
     .header-menu {
       display: block;
