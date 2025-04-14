@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <a href="index.html" alt="Inicio" class="header-logo">
           <img src="img/personagem1-aumentado.gif" alt="Logo" />
@@ -31,31 +31,34 @@
           <ul>
             <li>
               <a class="btn" href="index.html" title="Inicio">
-                <i class="fa-solid fa-house"></i>Inicio</a
-              >
+                <i class="fa-solid fa-house"></i>Inicio
+              </a>
             </li>
             <li>
-              <a class="btn" href="sobre.html" title="Sobre">
-                <i class="fa-solid fa-info-circle"></i>Sobre</a
-              >
+              <a class="btn" href="paginas/sobre.html" title="Sobre">
+                <i class="fa-solid fa-info-circle"></i>Sobre
+              </a>
             </li>
             <li>
-              <a class="btn" href="galeria.html" title="Galeria">
-                <i class="fa-solid fa-images"></i>Galeria</a
-              >
+              <a class="btn" href="paginas/galeria.html" title="Galeria">
+                <i class="fa-solid fa-images"></i>Galeria
+              </a>
             </li>
             <li>
-              <a class="btn" href="contato.html" title="Contato">
-                <i class="fa-solid fa-envelope"></i>Contato</a
-              >
+              <a class="btn" href="paginas/contato.html" title="Contato">
+                <i class="fa-solid fa-envelope"></i>Contato
+              </a>
             </li>
             <li>
-              <a class="btn" href="jogo.html" title="Jogar">
-                <i class="fa-solid fa-solid fa-play"></i>Jogar</a
-              >
+              <a class="btn" href="paginas/jogo.html" title="Jogar">
+                <i class="fa-solid fa-solid fa-play"></i>Jogar
+              </a>
             </li>
           </ul>
         </nav>
+        <a href="javascript:mostrarmenu()" title="Menu" class="header-menu">
+          <i class="fa-solid fa-bars"></i>
+        </a>
       </div>
     </header>
     <main></main>
@@ -86,5 +89,12 @@
         </li>
       </ul>
     </footer>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      function mostrarmenu() {
+        $(".header-nav").toggle();
+      }
+    </script>
   </body>
 </html>
