@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comic Neue", cursive;
 }
 
 html,
@@ -11,9 +11,10 @@ body {
 
 .header {
   background-color: #360103;
-
+  position: fixed;
   width: 100%;
 
+  z-index: 2;
   .container {
     display: flex;
     justify-content: space-between;
@@ -65,7 +66,7 @@ body {
         margin: 0 5px;
 
         .btn {
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: "Comic Neue", cursive;
           background-color: #ea3818;
           padding: 10px 15px;
           border-radius: 10px;
@@ -98,13 +99,17 @@ body {
 }
 
 body {
-  margin: 0;
+  margin-top: 0;
   padding: 0;
   box-sizing: border-box;
   background-image: url("../img/cidade_fundo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+body.menu-aberto .main {
+  padding-top: 430px;
 }
 
 .historia-jogo {
@@ -119,7 +124,7 @@ body {
   width: 60%;
   max-height: 500px;
   overflow-y: auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comic Neue", cursive;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff8ff;
   padding: 20px;
@@ -127,13 +132,12 @@ body {
   position: relative;
   font-size: 20px;
   overflow-y: scroll;
-  scrollbar-width: none;
   line-height: 1.8;
 }
 
 .personagem {
   position: absolute;
-  top: 100px;
+  top: 250px;
   right: 0px;
   flex: 1;
   display: flex;
@@ -154,6 +158,95 @@ body {
   display: block;
   margin-top: -10px;
   box-sizing: border-box;
+}
+
+.main {
+  padding-top: 120px;
+
+  .titulo {
+    width: 100%;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff8ff;
+      font-size: 55px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+
+  .titulo-inimigo {
+    margin-top: -1px;
+    background-color: #1b1a1f;
+    color: #fff8ff;
+    font-size: 55px;
+    text-align: center;
+  }
+
+  .inimigos {
+    .nome {
+      display: none;
+    }
+  }
+
+  .inimigos-campo {
+    margin-top: -1px;
+    background-color: #1b1a1f;
+    display: flex;
+
+    .inimigo-historia {
+      .nome {
+        display: flex;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      position: relative;
+      margin: 60px;
+      padding: 20px;
+      width: 70%;
+      height: 500px;
+      background-color: rgba(255, 248, 255, 0.8);
+      border-radius: 10px;
+      font-family: "Comic Neue", cursive;
+      font-size: 25px;
+      line-height: 1.8;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+
+    #sprite {
+      width: 30%;
+      max-height: 500px;
+      margin: 60px;
+    }
+
+    .botoes-navegacao {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .botoes-navegacao button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-family: "Comic Neue", cursive;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botoes-navegacao button:hover {
+      background-color: #cc0000;
+    }
+  }
 }
 
 /* Para telas menores que 1450px */
@@ -188,47 +281,6 @@ body {
   }
 }
 
-.main {
-  .titulo-inimigos {
-    margin-top: -1px;
-    background-color: #1b1a1f;
-    color: #fff8ff;
-    font-size: 55px;
-    text-align: center;
-  }
-
-  .inimigos-campo {
-    margin-top: -1px;
-    background-color: #1b1a1f;
-    display: flex;
-
-    .inimigo-historia {
-      width: 70%;
-      margin: 60px;
-      padding: 20px;
-      background-color: rgba(255, 248, 255, 0.8);
-      max-height: 500px;
-      font-family: Arial, Helvetica, sans-serif;
-      position: relative;
-      border-radius: 10px;
-      font-size: 20px;
-      overflow-y: scroll;
-      scrollbar-width: none;
-      line-height: 1.8;
-    }
-
-    #sprite {
-      width: 30%;
-      max-height: 500px;
-      margin: 60px;
-    }
-
-    button {
-      border-radius: 10px;
-    }
-  }
-}
-
 @media (max-width: 960px) {
   .header {
     .header-menu {
@@ -240,7 +292,6 @@ body {
     }
 
     .header-logo {
-      width: 100%;
       justify-content: center;
       margin-bottom: 10px;
 
@@ -251,8 +302,8 @@ body {
     }
 
     .header-nav {
-      width: 100%;
       display: none;
+      width: 100%;
       flex-direction: column;
       align-items: center;
 
@@ -264,16 +315,45 @@ body {
         }
       }
     }
-
-    .header-nav.ativo {
-      display: flex;
-    }
   }
+
   .main {
     .inimigos {
+      position: relative;
       background-color: #1b1a1f;
-
+      .nome {
+        display: flex;
+      }
       .inimigos-campo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .inimigo-historia {
+        width: 90%;
+        max-width: 600px;
+        min-height: 600px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      #descricao-container {
+        flex: 1;
+        overflow-y: auto;
+        margin: 10px 0;
+        min-height: 200px;
+      }
+
+      #sprite {
+        width: auto;
+        height: 200px;
+        object-fit: contain;
         display: block;
       }
     }
@@ -317,7 +397,7 @@ footer {
     margin: 10px 0;
 
     li {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Comic Neue", cursive;
       margin: 0 10px;
       font-size: 30px;
 
