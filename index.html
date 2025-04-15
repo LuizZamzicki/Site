@@ -107,22 +107,22 @@
       </div>
 
       <img class="chao" src="img/chao.png" alt="chao" />
-      <div class="inimigos-campo">
-        <div class="inimigo-historia">
-          <h1>Inimigo 1</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
-            dolor eos magni saepe et ipsa deleniti doloribus possimus mollitia
-            laborum officia enim eveniet itaque sint optio deserunt voluptatem
-            dolores alias.
-          </p>
-        </div>
+      <div class="inimigos">
+        <h1 class="titulo-inimigos">Inimigos</h1>
+        <div class="inimigos-campo">
+          <div class="inimigo-historia">
+            <h1 id="nome">Inimigo 1</h1>
+            <p id="descricao">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
+              dolor eos magni saepe et ipsa deleniti doloribus possimus mollitia
+              laborum officia enim eveniet itaque sint optio deserunt voluptatem
+              dolores alias.
+            </p>
+            <button onclick="proximoInimigo()">Próximo Inimigo</button>
+          </div>
 
-        <img
-          src="img/personagem1-aumentado.gif"
-          alt="inimigo1"
-          class="inimigo-img"
-        />
+          <img src="img/personagem1-aumentado.gif" alt="inimigo1" id="sprite" />
+        </div>
       </div>
     </main>
 
@@ -163,6 +163,37 @@
     <script>
       function mostrarmenu() {
         $(".header-nav").toggle();
+      }
+    </script>
+    <script>
+      const inimigos = [
+        {
+          nome: "João",
+          descricao:
+            "João é um amigo de Breno de longa data, todas as vezes que eles saem juntos, " +
+            "é João quem banca o rolê. Até que um dia João se cansa disso e decide cobrar Breno",
+          sprite: "img/personagem1.gif",
+        },
+        {
+          nome: "Inimigo 2",
+          descricao: "Este é o segundo inimigo. Ele é forte e resistente.",
+          sprite: "img/personagem1.gif",
+        },
+        {
+          nome: "Inimigo 3",
+          descricao: "Este é o terceiro inimigo. Ele ataca de longe.",
+          sprite: "img/personagem1.gif",
+        },
+      ];
+
+      let indice = 0;
+
+      function proximoInimigo() {
+        indice = (indice + 1) % inimigos.length;
+        document.getElementById("nome").textContent = inimigos[indice].nome;
+        document.getElementById("descricao").textContent =
+          inimigos[indice].descricao;
+        document.getElementById("sprite").src = inimigos[indice].sprite;
       }
     </script>
   </body>
