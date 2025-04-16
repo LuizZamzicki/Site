@@ -35,7 +35,6 @@ body {
     }
 
     p {
-      text-align: left;
       font-size: 30px;
       font-family: "Comic Neue", sans-serif;
       color: rgb(103, 103, 255);
@@ -165,6 +164,7 @@ body.menu-aberto .main {
   padding-top: 100px;
 
   .titulo {
+    margin-top: 10px;
     width: 100%;
     text-align: center;
     h1 {
@@ -198,14 +198,9 @@ body.menu-aberto .main {
     display: flex;
 
     .inimigo-historia {
-      .nome {
-        display: flex;
-      }
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       position: relative;
       margin: 60px;
       padding: 20px;
@@ -218,6 +213,10 @@ body.menu-aberto .main {
       line-height: 1.8;
       overflow-y: scroll;
       scrollbar-width: none;
+
+      .nome {
+        display: flex;
+      }
     }
 
     #sprite {
@@ -226,13 +225,17 @@ body.menu-aberto .main {
       margin: 60px;
     }
 
-    .botoes-navegacao {
+    .botoes-navegacao-cima {
+      display: none;
+    }
+
+    .botoes-navegacao-baixo {
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
     }
 
-    .botoes-navegacao button {
+    .botoes-navegacao-baixo button {
       background-color: #ff4d4d;
       color: white;
       border: none;
@@ -244,7 +247,7 @@ body.menu-aberto .main {
       transition: background-color 0.3s ease;
     }
 
-    .botoes-navegacao button:hover {
+    .botoes-navegacao-baixo button:hover {
       background-color: #cc0000;
     }
   }
@@ -252,6 +255,11 @@ body.menu-aberto .main {
 
 /* Para telas menores que 1450px */
 @media (max-width: 1450px) {
+  html,
+  body {
+    height: 100%;
+  }
+
   .historia-jogo {
     position: relative;
     flex-direction: column;
@@ -262,7 +270,7 @@ body.menu-aberto .main {
     width: 100%;
     text-align: center;
     padding: 10px 20px;
-    margin-bottom: 60%;
+    margin-bottom: 200px;
     box-sizing: border-box;
   }
 
@@ -278,16 +286,11 @@ body.menu-aberto .main {
   .personagem img {
     width: auto;
     max-width: 100%;
-    height: auto;
+    height: 40%;
   }
 }
 
 @media (max-width: 960px) {
-  html,
-  body {
-    height: 100%;
-  }
-
   .header {
     .header-menu {
       display: block;
@@ -414,6 +417,46 @@ footer {
         & :hover {
           transform: translateY(-6px);
         }
+      }
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  #sprite {
+    width: 24% !important;
+    max-width: 250px !important;
+    max-height: 350px !important;
+    min-width: 190px !important;
+    min-height: 240px !important;
+  }
+  .inimigo-historia {
+    max-height: 350px;
+    scrollbar-width: auto;
+
+    .botoes-navegacao-baixo {
+      display: none !important;
+    }
+
+    .botoes-navegacao-cima {
+      display: flex !important;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      button {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-family: "Comic Neue", cursive;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #cc0000;
       }
     }
   }
