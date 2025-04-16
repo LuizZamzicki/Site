@@ -27,6 +27,6 @@ function validarFormulario() {
     emailInput.focus();
     return false;
   }
-
+  alert("E-mail enviado com sucesso!");
   return true;
 }

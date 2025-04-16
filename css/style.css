@@ -35,6 +35,7 @@ body {
     }
 
     p {
+      text-align: left;
       font-size: 30px;
       font-family: "Comic Neue", sans-serif;
       color: rgb(103, 103, 255);
