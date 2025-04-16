@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="contato">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breno's Run</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/outros.css" />
     <link rel="icon" href="/img/personagem1.gif" />
     <link
       href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap"
@@ -67,72 +68,50 @@
 
     <main class="main">
       <div class="titulo">
-        <h1>Breno</h1>
+        <h1>Contato</h1>
       </div>
-      <div class="historia-jogo">
-        <div class="historia">
-          <h1>A corrida da coca:</h1>
-          <p>
-            Era uma noite tranquila no bar da cidade, e Breno, conhecido por ser
-            mais pão-duro que cofre sem chave, estava sentado à mesa com seu
-            amigo João. Depois de algumas rodadas pagas por João, ele diz:<br /><br />
+      <div class="contato-div">
+        <form class="formulario" onsubmit="return validarFormulario()">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Digite seu nome"
+          />
 
-            — "Breno, agora é sua vez de pagar a Coca!"<br /><br />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Digite seu email"
+          />
 
-            Breno sem pensar duas vezes, bate na mesa e grita:<br /><br />
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            required
+            maxlength="15"
+            oninput="formatarTelefone(this)"
+            placeholder="(00) 00000-0000"
+          />
 
-            — "NEM MORTO!"<br /><br />
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="4"
+            required
+            placeholder="Deixe sua mensagem :)"
+          ></textarea>
 
-            Em um salto digno de medalha olímpica, Breno sai correndo pela
-            cidade.<br /><br />
-
-            Agora, começa a Corrida do Calote!<br /><br />
-
-            João parte na cola de Breno, e o desespero bate: ele precisa correr
-            o máximo possível para escapar do terrível acerto de contas. No
-            caminho, ele tem que desviar de velhos conhecidos como João Gabriel,
-            Emanuel e Mauro, que tentam cercá-lo para cobrar as dívidas
-            passadas.<br /><br />
-
-            Mas nem tudo é sobre fugir… Às vezes, Breno vê algo que pode
-            distraí-lo: uma barraca de pastel de dar água na boca. Se ele perder
-            o foco, será tarde demais… João finalmente o alcança e a dívida será
-            cobrada!<br /><br />
-
-            Será que Breno conseguirá escapar ou finalmente terá que tirar o
-            escorpião do bolso?
-          </p>
-        </div>
-
-        <div class="personagem">
-          <img src="img/personagem1-aumentado.gif" alt="personagem correndo" />
-        </div>
-      </div>
-
-      <img class="chao" src="img/chao.png" alt="chao" />
-      <div class="inimigos">
-        <h1 class="titulo-inimigo">Inimigos</h1>
-        <div class="inimigos-campo">
-          <div class="inimigo-historia">
-            <h1 class="nome">João</h1>
-            <div id="descricao-container">
-              <p id="descricao">
-                Amigo de longa data do Breno, sempre foi o patrocinador oficial
-                das cocas.<br /><br />
-                Mas até a paciência dele tem limite.<br /><br />
-                Hoje, ele decidiu que ou o Breno paga, ou vai correr!
-              </p>
-            </div>
-            <div class="botoes-navegacao">
-              <button onclick="voltarInimigo()">⟵ Voltar</button>
-              <button onclick="proximoInimigo()">Próximo ⟶</button>
-            </div>
-          </div>
-
-          <h1 class="nome" style="color: white">João</h1>
-
-          <img src="img/joao-aumentado.gif" alt="inimigo" id="sprite" />
-        </div>
+          <button type="submit">Enviar</button>
+        </form>
       </div>
     </main>
 
@@ -174,6 +153,6 @@
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/menu.js"></script>
-    <script src="/js/inimigos.js"></script>
+    <script src="/js/formulario.js"></script>
   </body>
 </html>

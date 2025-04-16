@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="sobre">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breno's Run</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/outros.css" />
     <link rel="icon" href="/img/personagem1.gif" />
     <link
       href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap"
@@ -67,54 +68,69 @@
 
     <main class="main">
       <div class="titulo">
-        <h1>Breno</h1>
+        <h1>Sobre</h1>
       </div>
-      <div class="historia-jogo">
-        <div class="historia">
-          <h1>A corrida da coca:</h1>
-          <p>
-            Era uma noite tranquila no bar da cidade, e Breno, conhecido por ser
-            mais pão-duro que cofre sem chave, estava sentado à mesa com seu
-            amigo João. Depois de algumas rodadas pagas por João, ele diz:<br /><br />
+      <div class="sobre-div">
+        <h1>Aopa!</h1>
+        <p>
+          E aí! Eu sou o Luiz — o cérebro por trás dessa obra-prima.
+          <br /><br />
 
-            — "Breno, agora é sua vez de pagar a Coca!"<br /><br />
+          Esse jogo nasceu de uma inspiração muito próxima a mim:<br />
+          um amigo pão-duro que não pagou uma coca nem quando o próprio pai
+          pediu. <br />
+          Sim, isso aconteceu de verdade. <br />
+          Sim, tranformei isso num jogo. <br />
+          E sim, ele ainda tá me devendo. <br /><br />
 
-            Breno sem pensar duas vezes, bate na mesa e grita:<br /><br />
+          Para a jogabilidade, peguei referência de jogos como Jetpack
+          Joyride<br />
+          e o jogo do dinossauro do Chrome. Pensei em um endless runner<br />
+          simples, viciante, com um toque de humor ácido e uma crítica
+          bem-humorada<br />
+          à esperteza dos amigos caloteiros.<br />
+          <br />
+          No jogo, você controla o Breno que corre desesperadamente para<br />
+          fugir da conta — desviando de obstáculos, coletando latinhas de
+          Coca<br />
+          e tentando ir o mais longe possível sem ser pego.<br />
+          <br />
+          A vibe é frenética, com jogabilidade rápida e visual retrô — tudo
+          pensado<br />
+          para arrancar umas risadas enquanto desafia seus reflexos.<br />
+          <br />
+          Pra mim, isso é mais do que um jogo:<br />
+          é uma pequena vingança contra aquele caloteiro filho da mãe.
+          <br /><br />
+          Como todo bom dev que se preze, eu comecei esse projeto com um
+          objetivo nobre: <br />transformar calotes, promessas não cumpridas e
+          barracas de pastel em uma aventura épica. <br />
+          Cada personagem aqui tem uma história, uma treta e, claro, uma Coca
+          pra cobrar. <br /><br />
 
-            — "NEM MORTO!"<br /><br />
+          Se você riu, se divertiu ou lembrou daquele colega que sempre "esquece
+          a carteira", já ganhei meu dia. <br /><br />
 
-            Em um salto digno de medalha olímpica, Breno sai correndo pela
-            cidade.<br /><br />
-
-            Agora, começa a Corrida do Calote!<br /><br />
-
-            João parte na cola de Breno, e o desespero bate: ele precisa correr
-            o máximo possível para escapar do terrível acerto de contas. No
-            caminho, ele tem que desviar de velhos conhecidos como João Gabriel,
-            Emanuel e Mauro, que tentam cercá-lo para cobrar as dívidas
-            passadas.<br /><br />
-
-            Mas nem tudo é sobre fugir… Às vezes, Breno vê algo que pode
-            distraí-lo: uma barraca de pastel de dar água na boca. Se ele perder
-            o foco, será tarde demais… João finalmente o alcança e a dívida será
-            cobrada!<br /><br />
-
-            Será que Breno conseguirá escapar ou finalmente terá que tirar o
-            escorpião do bolso?
-          </p>
-        </div>
+          Agora falando sério por 5 segundos: <br />
+          Esse jogo foi uma forma de praticar e mostrar o que eu consigo fazer
+          com programação, criatividade e um toque de humor. <br />
+          É só o começo da minha jornada como desenvolvedor, e espero que esse
+          projeto seja o primeiro de muitos. <br />
+          Obrigado por jogar — e cuidado com o calote! 😎
+        </p>
       </div>
     </main>
 
     <!-- Footer -->
 
     <footer>
-      <img src="img/personagem1-aumentado.gif" alt="Logo" />
+      <img src="/img/personagem1-aumentado.gif" alt="Logo" />
       <p>Developed by Luiz H. G. Zamzicki</p>
       <ul>
         <li>
           <a
             href="https://www.instagram.com/luiz_zamzicki"
+            target="_blank"
             class="btn-footer"
             title="Instagram"
             ><i class="fa-brands fa-instagram"></i
@@ -123,6 +139,7 @@
         <li>
           <a
             href="https://www.linkedin.com/in/luizzamzicki"
+            target="_blank"
             class="btn-footer"
             title="Linkedin"
             ><i class="fa-brands fa-linkedin"></i
@@ -131,6 +148,7 @@
         <li>
           <a
             href="https://github.com/LuizZamzicki"
+            target="_blank"
             class="btn-footer"
             title="GitHub"
             ><i class="fa-brands fa-github"></i
@@ -138,96 +156,8 @@
         </li>
       </ul>
     </footer>
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script>
-      function mostrarmenu() {
-        $(".header-nav").toggle();
-        $("body").toggleClass("menu-aberto");
-      }
-
-      window.addEventListener("resize", function () {
-        if (window.innerWidth > 960) {
-          $(".header-nav").show();
-        }
-      });
-    </script>
-    <script>
-      const inimigos = [
-        {
-          nome: "João",
-          descricao:
-            "Amigo de longa data do Breno, sempre foi o patrocinador oficial das cocas.<br /><br />" +
-            "Mas até a paciência dele tem limite.<br /><br />" +
-            "Hoje, ele decidiu que ou o Breno paga, ou vai correr!",
-          sprite: "img/joao-aumentado.gif",
-        },
-        {
-          nome: "João Gabriel",
-          descricao:
-            "Uma vez emprestou o carregador do celular pro Breno. Resultado?<br /><br />" +
-            "Nunca mais viu nem o carregador, nem a coca prometida em troca.<br /><br />" +
-            "Agora corre atrás dele, não pelo carregador, mas pela justiça!",
-          sprite: "img/Joao-Gabriel-Aumentado.gif",
-        },
-        {
-          nome: "Mauro",
-          descricao:
-            "Colega de faculdade do Breno. <br /><br />" +
-            "Teve a paciência de ajudar o cara a montar toda a apresentação do projeto, em troca de uma mísera coca.<br /><br />" +
-            "Nunca nem sentiu o cheiro da garrafa. Tá na pista pra cobrar com juros!",
-          sprite: "img/Mauro-aumentado.gif",
-        },
-        {
-          nome: "Emanuel",
-          descricao:
-            "Colega de serviço do Breno e conhecido pela GRANDE presença.<br /><br />" +
-            "Um dia Breno passou umas tarefas pra ele resolver em seu lugar, prometendo pagar com uma coca. E adivinha?<br /><br />" +
-            "Emanuel ganhou só serviço — e nenhum gole. Agora vem pesado na cobrança, literalmente.",
-          sprite: "img/Emanuel-aumentado.gif",
-        },
-        {
-          nome: "Rafael",
-          descricao:
-            "Breno não deve nada pra ele…<br /><br />" +
-            "Mas prometeram uma coca se ajudasse na captura!<br /><br />" +
-            "Motivo suficiente pra entrar nessa caçada.",
-          sprite: "img/Rafael-aumentado.gif",
-        },
-        {
-          nome: "Pastelzin",
-          descricao:
-            "O maior ponto fraco do Breno.<br /><br />" +
-            "Mesmo fugindo do acerto de contas, um pastelzin bem frito pode fazer ele esquecer que está sendo perseguido.<br /><br />" +
-            "Mas cuidado! Enquanto ele baba no pastel, João se aproxima sorrateiro... e com fome também! (Só que de justiça)",
-          sprite: "img/barraca_pastel.png",
-        },
-      ];
-
-      let indice = 0;
-
-      function atualizarNome(novoNome) {
-        const nomes = document.getElementsByClassName("nome");
-        for (let i = 0; i < nomes.length; i++) {
-          nomes[i].textContent = novoNome;
-        }
-      }
-
-      function proximoInimigo() {
-        indice = (indice + 1) % inimigos.length;
-        atualizarNome(inimigos[indice].nome);
-        document.getElementById("descricao").innerHTML =
-          inimigos[indice].descricao;
-        document.getElementById("sprite").src = inimigos[indice].sprite;
-      }
-
-      function voltarInimigo() {
-        indice = (indice - 1 + inimigos.length) % inimigos.length;
-        atualizarNome(inimigos[indice].nome);
-        document.getElementById("descricao").innerHTML =
-          inimigos[indice].descricao;
-        document.getElementById("sprite").src = inimigos[indice].sprite;
-      }
-    </script>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/menu.js"></script>
   </body>
 </html>

@@ -161,7 +161,7 @@ body.menu-aberto .main {
 }
 
 .main {
-  padding-top: 120px;
+  padding-top: 100px;
 
   .titulo {
     width: 100%;
@@ -267,7 +267,7 @@ body.menu-aberto .main {
 
   .personagem {
     position: absolute;
-    bottom: -1%; /* Ajuste esse valor pra subir ou descer */
+    bottom: -1%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -282,6 +282,11 @@ body.menu-aberto .main {
 }
 
 @media (max-width: 960px) {
+  html,
+  body {
+    height: 100%;
+  }
+
   .header {
     .header-menu {
       display: block;
