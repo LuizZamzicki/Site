@@ -178,7 +178,7 @@ body.menu-aberto .main {
     }
   }
 
-  .titulo-inimigo {
+  .titulo-secao {
     margin-top: -1px;
     background-color: #1b1a1f;
     color: #fff8ff;
@@ -253,6 +253,63 @@ body.menu-aberto .main {
   }
 }
 
+.jogar {
+  margin-top: -1px;
+  padding: 10px;
+  background-color: #1b1a1f;
+  display: block;
+
+  .info-jogo {
+    position: relative;
+    margin: 30px auto;
+    padding: 20px;
+    width: 70%;
+    height: 500px;
+    background-color: rgba(255, 248, 255, 0.8);
+    border-radius: 10px;
+    font-family: "Comic Neue", cursive;
+    font-size: 25px;
+    line-height: 1.8;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    .texto-jogo {
+      overflow-y: scroll;
+      height: 400px;
+      margin: 15px;
+      text-align: center;
+    }
+
+    .btn-jogar {
+      margin: 0 auto;
+      width: 50%;
+      height: 50px;
+      max-width: 300px;
+      font-family: "Comic Neue", cursive;
+      background-color: #ea3818;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #fff8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: jogarAnima 0.5s infinite alternate;
+    }
+  }
+}
+
+@keyframes jogarAnima {
+  from {
+    background-color: rgb(100, 25, 0);
+    color: #aaa;
+  }
+
+  do {
+    transform: scale(100%);
+  }
+}
 /* Para telas menores que 1450px */
 @media (max-width: 1450px) {
   html,
@@ -424,15 +481,30 @@ footer {
 
 @media (max-height: 700px) {
   #sprite {
-    width: 24% !important;
-    max-width: 250px !important;
-    max-height: 350px !important;
+    margin: 0 !important;
+    width: 20% !important;
+    max-width: 200px !important;
+    max-height: 300px !important;
     min-width: 190px !important;
-    min-height: 240px !important;
+    min-height: 200px !important;
   }
+
   .inimigo-historia {
-    max-height: 350px;
+    margin: 10px !important;
     scrollbar-width: auto;
+    min-height: 350px !important;
+    max-height: 350px !important;
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+
+    #descricao-container {
+      overflow-y: auto;
+      max-height: 220px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
 
     .botoes-navegacao-baixo {
       display: none !important;

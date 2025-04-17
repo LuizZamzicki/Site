@@ -111,14 +111,16 @@
 
       <img class="chao" src="img/chao.png" alt="chao" />
       <div class="inimigos">
-        <h1 class="titulo-inimigo">Inimigos</h1>
+        <h1 class="titulo-secao">Inimigos</h1>
         <div class="inimigos-campo">
           <div class="inimigo-historia">
             <div class="botoes-navegacao-cima">
-              <button onclick="voltarInimigo()">⟵ Voltar</button>
-              <button onclick="proximoInimigo()">Próximo ⟶</button>
+              <button onclick="voltarInimigo()">Voltar</button>
+              <button onclick="proximoInimigo()">Próximo</button>
             </div>
-            <h1 class="nome">João</h1>
+            <h1 class="nome" style="font-weight: bold; font-style: italic">
+              João
+            </h1>
             <div id="descricao-container">
               <p id="descricao">
                 Amigo de longa data do Breno, sempre foi o patrocinador oficial
@@ -132,10 +134,39 @@
               <button onclick="proximoInimigo()">Próximo ⟶</button>
             </div>
           </div>
-
-          <h1 class="nome" style="color: white">João</h1>
-
           <img src="img/joao-aumentado.gif" alt="inimigo" id="sprite" />
+          <h1 class="nome" style="color: white">João</h1>
+        </div>
+      </div>
+
+      <div class="jogar">
+        <h1 class="titulo-secao">Sobre o jogo</h1>
+
+        <div class="info-jogo">
+          <div class="texto-jogo">
+            <p>
+              No estilo de clássicos como Jetpack Joyride e o jogo do dinossauro
+              do Chrome. Breno e a corrida da coca é um endless runner simples,
+              viciante, com um toque de humor ácido e uma crítica
+              bem-humorada<br />
+              à esperteza dos amigos caloteiros.<br />
+              <br />
+              No jogo, você controla o Breno que corre desesperadamente para<br />
+              fugir da conta — desviando de obstáculos, coletando garrafas de
+              Coca<br />
+              e tentando ir o mais longe possível sem ser pego.<br />
+              <br />
+              A vibe é frenética, com jogabilidade rápida e visual retrô — tudo
+              pensado<br />
+              para arrancar umas risadas enquanto desafia seus reflexos.<br />
+              <br />
+            </p>
+          </div>
+          <div class="bt">
+            <a class="btn-jogar" href="paginas/jogo.html" title="Jogar agora!">
+              Jogue Agora!
+            </a>
+          </div>
         </div>
       </div>
     </main>

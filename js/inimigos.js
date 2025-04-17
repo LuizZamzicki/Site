@@ -62,6 +62,7 @@ function proximoInimigo() {
   indice = (indice + 1) % inimigos.length;
   atualizarNome(inimigos[indice].nome);
   document.getElementById("descricao").innerHTML = inimigos[indice].descricao;
+  document.getElementById("descricao-container").scrollTop = 0;
   document.getElementById("sprite").src = inimigos[indice].sprite;
 }
 
