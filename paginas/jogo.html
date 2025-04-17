@@ -123,5 +123,26 @@
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/menu.js"></script>
+    <script>
+      const jogoDiv = document.querySelector(".jogo-div");
+
+      let scrollY = 0;
+
+      jogoDiv.addEventListener("mouseenter", () => {
+        scrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.overflow = "hidden";
+        document.body.style.width = "100%";
+      });
+
+      jogoDiv.addEventListener("mouseleave", () => {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.overflow = "";
+        document.body.style.width = "";
+        window.scrollTo(0, scrollY);
+      });
+    </script>
   </body>
 </html>
