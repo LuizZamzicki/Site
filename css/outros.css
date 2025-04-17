@@ -2,6 +2,29 @@
   text-align: center;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
 .sobre {
   margin: 0;
   padding: 0;
@@ -168,7 +191,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .jogo-div {
     position: relative;
     width: 100vw;
