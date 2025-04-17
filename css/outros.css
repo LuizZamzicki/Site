@@ -183,6 +183,39 @@ footer {
   }
 }
 
+@media (max-width: 960px) {
+  .sobre {
+    height: 100%;
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+  }
+
+  .galeria-div {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jogo-div {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .jogo-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    border: none;
+  }
+}
+
 @media (max-height: 700px) {
   .main {
     flex: 1;

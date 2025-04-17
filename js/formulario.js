@@ -28,7 +28,7 @@ function validarFormulario() {
     return false;
   }
 
-  const telefoneInput = document.getElementById("telefone");
+  const telefoneInput = document.getElementById("telefone");p
   const telefone = telefoneInput.value;
 
   if (telefone.replace(/\D/g, "").length != 11) {
