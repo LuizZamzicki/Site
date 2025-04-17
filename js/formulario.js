@@ -27,6 +27,17 @@ function validarFormulario() {
     emailInput.focus();
     return false;
   }
+
+  const telefoneInput = document.getElementById("telefone");
+  const telefone = telefoneInput.value;
+
+  if (telefone.replace(/\D/g, "").length != 11) {
+    console.log(telefone.replace(/\D/g, ""));
+    console.log(telefone.replace(/\D/g, "").length);
+    alert("Por favor, insira um telefone válido.");
+    telefoneInput.focus();
+    return false;
+  }
   alert("E-mail enviado com sucesso!");
   return true;
 }
